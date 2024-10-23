@@ -1,0 +1,65 @@
+/* reset */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    min-height: 100vh;
+    color:#ffffff;
+}
+
+/* style */
+header {
+ padding: 20px;
+}
+
+#logo img {
+    width: 30px;
+    height: 30px;
+}
+
+
+nav {
+    text-align: right;
+}
+
+nav * {
+    margin-left: 20px;
+}
+
+.fonas {
+    background: rgb(34,195,123);
+    background: linear-gradient(0deg, rgba(34,195,123,1) 0%, rgba(45,157,253,1) 100%);
+}
+
+main {
+    max-width: 650px;
+    margin: 0 auto;
+
+}
+
+.big-crystal {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.big-crystal img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.big-crystal-text {
+    color: #000000;
+    text-align: center;
+    margin-top: 30px;
+}
+
+strong {
+    color: blue;
+}
