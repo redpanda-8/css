@@ -7,6 +7,9 @@ a {
 body {
     min-height: 100vh;
     color:#ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    
 }
 
 /* style */
@@ -28,6 +31,11 @@ nav * {
     margin-left: 20px;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
 .fonas {
     background: rgb(34,195,123);
     background: linear-gradient(0deg, rgba(34,195,123,1) 0%, rgba(45,157,253,1) 100%);
@@ -36,6 +44,7 @@ nav * {
 main {
     max-width: 650px;
     margin: 0 auto;
+    padding: 150px 0;
 
 }
 
@@ -62,4 +71,31 @@ main {
 
 strong {
     color: blue;
+}
+
+.maintext {
+    color: #000000;
+    margin-bottom: 40px;
+    max-width: 350px;
+}
+
+.welcome {
+    font-size: 30px;
+}
+
+.crystalshop {
+    font-size: 60px;
+    margin-top: 0;
+}
+
+.shopnow {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.shopnow:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
