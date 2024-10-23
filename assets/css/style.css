@@ -1,0 +1,77 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". stage-1 stage-2 stage-3 stage-4 stage-5 stage-6 stage-7"
+      "time-1 talk-1 talk-1 talk-4 talk-5 talk-5 talk-9 talk-9"
+      "time-2 talk-1 talk-1 talk-4 break-1 break-1 talk-9 talk-9"
+      "time-3 talk-1 talk-1 talk-4 talk-6 talk-6 talk-9 talk-9"
+      "time-4 break-2 break-2 talk-4 talk-6 talk-6 talk-9 talk-9"
+      "time-5 talk-2 talk-2 talk-2 talk-6 talk-6 talk-9 talk-9"
+      "time-6 talk-2 talk-2 talk-2 talk-6 talk-6 talk-9 talk-9"
+      "time-7 break-3 break-3 break-3 break-3 break-3 break-3 break-3"
+      "time-8 talk-7 talk-7 . . . talk-10 talk-10"
+      "time-9 talk-7 talk-7 talk-8 talk-8 talk-8 talk-10 talk-10"
+      "time-10 talk-7 talk-7 talk-8 talk-8 talk-8 talk-10 talk-10";
+  }
+  
+  .talk-1 { grid-area: talk-1; }
+  
+  .talk-4 { grid-area: talk-4; }
+  
+  .talk-5 { grid-area: talk-5; }
+  
+  .talk-9 { grid-area: talk-9; }
+  
+  .talk-6 { grid-area: talk-6; }
+  
+  .talk-2 { grid-area: talk-2; }
+  
+  .talk-7 { grid-area: talk-7; }
+  
+  .talk-8 { grid-area: talk-8; }
+  
+  .talk-10 { grid-area: talk-10; }
+  
+  .break-2 { grid-area: break-2; }
+  
+  .break-1 { grid-area: break-1; }
+  
+  .break-3 { grid-area: break-3; }
+  
+  .stage-1 { grid-area: stage-1; }
+  
+  .stage-2 { grid-area: stage-2; }
+  
+  .stage-3 { grid-area: stage-3; }
+  
+  .stage-4 { grid-area: stage-4; }
+  
+  .stage-5 { grid-area: stage-5; }
+  
+  .stage-6 { grid-area: stage-6; }
+  
+  .stage-7 { grid-area: stage-7; }
+  
+  .time-1 { grid-area: time-1; }
+  
+  .time-2 { grid-area: time-2; }
+  
+  .time-3 { grid-area: time-3; }
+  
+  .time-4 { grid-area: time-4; }
+  
+  .time-5 { grid-area: time-5; }
+  
+  .time-6 { grid-area: time-6; }
+  
+  .time-7 { grid-area: time-7; }
+  
+  .time-8 { grid-area: time-8; }
+  
+  .time-9 { grid-area: time-9; }
+  
+  .time-10 { grid-area: time-10; }
+  
