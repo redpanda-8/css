@@ -1,0 +1,9 @@
+@keyframes backdrop {
+    0%{ max-height: 0;}
+    100%{ max-height: 60px;}
+}
+
+@keyframes menu-expand {
+    0%{max-height: 0;}
+    100%{max-height: 750px;}
+}
