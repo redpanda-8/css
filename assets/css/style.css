@@ -1,3 +1,245 @@
-.hav {
-  background-color: black;
+@keyframes austa-dangus {
+  0% {
+    background-color: #030b0b;
+  }
+  100% {
+    background-color: #1bc6c6;
+  }
+}
+@keyframes gele-auga {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 500px;
+  }
+}
+@keyframes lapas-auga {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ziedas-pradzia {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes ziedas-lapai {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(60deg);
+    opacity: 1;
+  }
+}
+@keyframes saule-pakyla {
+  0% {
+    top: 40%;
+    left: -15%;
+  }
+  50% {
+    top: 30%;
+    left: 10%;
+  }
+  100% {
+    top: 20%;
+    left: 20%;
+  }
+}
+.atvirukas {
+  position: relative;
+  background: #030b0b;
+  width: 500px;
+  height: 500px;
+  animation: austa-dangus 3s forwards ease-in;
+  overflow: hidden;
+}
+.atvirukas__saule {
+  background: radial-gradient(circle, rgb(180, 141, 12) 0%, rgb(207, 196, 34) 47%, rgb(251, 232, 2) 100%);
+  box-shadow: 0 0 15px 5px rgb(251, 232, 2);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 40%;
+  left: -15%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  animation: saule-pakyla 3s forwards ease-in;
+}
+.atvirukas__gele {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  max-height: 0;
+  background: linear-gradient(90deg, rgb(16, 62, 12) 0%, rgb(48, 255, 0) 100%);
+  animation: gele-auga 3s forwards 1.5s ease-in;
+}
+.atvirukas__gele--pirma {
+  left: 15%;
+  height: 50%;
+}
+.atvirukas__gele--antra {
+  left: 50%;
+  height: 70%;
+}
+.atvirukas__gele--trecia {
+  left: 80%;
+  height: 90%;
+}
+.atvirukas__gele__lapas {
+  position: absolute;
+  width: 35px;
+  height: 40px;
+  border-radius: 0 50%;
+}
+.atvirukas__gele__lapas--ziedlapis {
+  opacity: 0;
+  transform-origin: bottom right;
+}
+.atvirukas__gele__lapas--ziedlapis:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: ziedas-lapai-1 3s forwards 4s ease-in;
+}
+@keyframes ziedas-lapai-1 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+}
+.atvirukas__gele__lapas--ziedlapis:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(60deg);
+  animation: ziedas-lapai-2 3s forwards 4.1s ease-in;
+}
+@keyframes ziedas-lapai-2 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(60deg);
+    opacity: 1;
+  }
+}
+.atvirukas__gele__lapas--ziedlapis:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(120deg);
+  animation: ziedas-lapai-3 3s forwards 4.2s ease-in;
+}
+@keyframes ziedas-lapai-3 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(120deg);
+    opacity: 1;
+  }
+}
+.atvirukas__gele__lapas--ziedlapis:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(180deg);
+  animation: ziedas-lapai-4 3s forwards 4.3s ease-in;
+}
+@keyframes ziedas-lapai-4 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+    opacity: 1;
+  }
+}
+.atvirukas__gele__lapas--ziedlapis:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(240deg);
+  animation: ziedas-lapai-5 3s forwards 4.4s ease-in;
+}
+@keyframes ziedas-lapai-5 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(240deg);
+    opacity: 1;
+  }
+}
+.atvirukas__gele__lapas--ziedlapis:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(300deg);
+  animation: ziedas-lapai-6 3s forwards 4.5s ease-in;
+}
+@keyframes ziedas-lapai-6 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(300deg);
+    opacity: 1;
+  }
+}
+.atvirukas__gele__lapas--raudonas {
+  background: linear-gradient(81deg, rgb(210, 14, 14) 0%, rgb(255, 203, 206) 100%);
+}
+.atvirukas__gele__lapas--melynas {
+  background: linear-gradient(81deg, rgb(17, 14, 210) 0%, rgb(203, 203, 255) 100%);
+}
+.atvirukas__gele__lapas--violetinis {
+  background: linear-gradient(81deg, rgb(198, 14, 210) 0%, rgb(252, 203, 255) 100%);
+}
+.atvirukas__gele__lapas--pirmas {
+  transform: rotate(103deg);
+  background: linear-gradient(-10deg, rgb(16, 62, 12) 0%, rgb(48, 255, 0) 100%);
+  left: 100%;
+  bottom: 60px;
+  opacity: 0;
+  animation: lapas-auga 1.5s forwards 2.5s ease-in;
+}
+.atvirukas__gele__lapas--antras {
+  transform: rotate(350deg);
+  background: linear-gradient(-10deg, rgb(16, 62, 12) 0%, rgb(48, 255, 0) 100%);
+  right: 100%;
+  bottom: 130px;
+  opacity: 0;
+  animation: lapas-auga 1.5s forwards 3s ease-in;
+}
+.atvirukas__gele__lapas--trecias {
+  transform: rotate(103deg);
+  background: linear-gradient(-10deg, rgb(16, 62, 12) 0%, rgb(48, 255, 0) 100%);
+  left: 100%;
+  bottom: 300px;
+  opacity: 0;
+  animation: lapas-auga 1.5s forwards 3.5s ease-in;
+}
+.atvirukas__gele__ziedas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(0%, 0%);
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(147, 148, 13) 0%, rgb(247, 245, 11) 100%);
+  animation: ziedas-pradzia 1.5s forwards 3.5s ease-in;
+}
+.atvirukas__gele__ziedas:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(147, 148, 13) 0%, rgb(247, 245, 11) 100%);
+  z-index: 10;
 }/*# sourceMappingURL=style.css.map */

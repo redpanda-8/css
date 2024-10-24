@@ -1,1 +1,137 @@
+@import "../sass/variables";
+@import "../sass/animations";
+@import "../sass/mixins";
 
+.atvirukas {
+    position: relative;
+    background: $background--night;
+    width: 500px;
+    height: 500px;
+    animation: austa-dangus 3s forwards ease-in;
+    overflow: hidden;
+    &__saule {
+        background: $background-saule;
+        box-shadow: 0 0 15px 5px $saule-spinduliai;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 40%;
+        left: -15%;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        animation: saule-pakyla 3s forwards ease-in;
+    }
+    &__gele {
+        position: absolute;
+        bottom: 0;
+        width: 10px;
+        max-height: 0;
+        background: $geles-kotas;
+        animation: gele-auga 3s forwards 1.5s ease-in;
+        &--pirma{
+            left: 15%;
+            height: 50%;
+        }
+        &--antra{
+            left: 50%;
+            height: 70%;
+        }
+        &--trecia{
+            left: 80%;
+            height: 90%;
+        }
+        &__lapas {
+            position: absolute;
+            width: 35px;
+            height: 40px;
+            border-radius: 0 50%;
+
+            &--ziedlapis {
+                opacity: 0;
+                transform-origin: bottom right;     
+                &:nth-child(1){
+                    transform: translate(-50%, -50%) rotate(0deg);
+                    @include ziedas-lapai(1)
+                }
+                &:nth-child(2){
+                    transform: translate(-50%, -50%) rotate(60deg);
+                    @include ziedas-lapai(2)
+                }
+                &:nth-child(3){
+                    transform: translate(-50%, -50%) rotate(120deg);
+                    @include ziedas-lapai(3)
+                }
+                &:nth-child(4){
+                    transform: translate(-50%, -50%) rotate(180deg);
+                    @include ziedas-lapai(4)
+                }
+                &:nth-child(5){
+                    transform: translate(-50%, -50%) rotate(240deg);
+                    @include ziedas-lapai(5)
+                }
+                &:nth-child(6){
+                    transform: translate(-50%, -50%) rotate(300deg);
+                    @include ziedas-lapai(6)
+                }
+                
+            }
+           
+            &--raudonas {
+                background: $ziedas-pirmas;
+            }
+            &--melynas {
+                background: $ziedas-antras;
+            }
+            &--violetinis {
+                background: $ziedas-trecias;
+            }
+            
+            &--pirmas {
+                transform: rotate(103deg);
+                background: $lapas-pirmas;
+                left: 100%;
+                bottom: 60px;
+                opacity: 0;
+                animation: lapas-auga 1.5s forwards 2.5s ease-in;
+            }
+            &--antras {
+                transform: rotate(350deg);
+                background: $lapas-pirmas;
+                right: 100%;
+                bottom: 130px;
+                opacity: 0;
+                animation: lapas-auga 1.5s forwards 3s ease-in;
+            }
+            &--trecias {
+                transform: rotate(103deg);
+                background: $lapas-pirmas;
+                left: 100%;
+                bottom: 300px;
+                opacity: 0;
+                animation: lapas-auga 1.5s forwards 3.5s ease-in;
+            }
+        }
+        &__ziedas{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(0%, 0%);
+            opacity: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: $geles-ziedas;
+            animation: ziedas-pradzia 1.5s forwards 3.5s ease-in;
+            &:before{
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                background: $geles-ziedas;
+                z-index: 10;
+            }
+            
+        }
+    }
+    
+}

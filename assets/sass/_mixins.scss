@@ -1,0 +1,17 @@
+@mixin ziedas-lapai ($pozicija) {
+
+    $delay: 4 + (($pozicija - 1) * 0.1);
+
+    animation: ziedas-lapai-#{$pozicija} 3s forwards #{$delay}s ease-in;      
+
+    @keyframes ziedas-lapai-#{$pozicija} {
+        0%   { 
+            transform: translate(0%, 0%) rotate(0deg);
+            opacity: 0;
+        }
+        100% { 
+            transform: translate(-50%, -50%) rotate(60deg * ($pozicija - 1));
+            opacity: 1;
+        }
+    }
+}
